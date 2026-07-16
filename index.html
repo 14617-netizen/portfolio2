@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio นายกฤษฎา</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:linear-gradient(to bottom,#d9d9d9,#8c8c8c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* กล่อง */
+.container{
+    width:380px;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+/* หัวข้อ */
+h1{
+    color:#444;
+    margin-bottom:20px;
+}
+
+/* รูปโปรไฟล์ */
+.profile{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #666;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+.profile:hover{
+    transform:scale(1.08) rotate(3deg);
+}
+
+/* เมนู */
+a{
+    display:block;
+    text-decoration:none;
+    background:#666;
+    color:white;
+    padding:12px;
+    margin:12px 0;
+    border-radius:10px;
+    font-size:18px;
+    transition:.3s;
+}
+
+a:hover{
+    background:#444;
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* หมาและแมว */
+.dog,.cat{
+    position:absolute;
+    top:-120px;
+    font-size:60px;
+    animation:fall 6s linear infinite;
+}
+
+.dog{
+    left:15%;
+}
+
+.cat{
+    right:15%;
+    animation-delay:3s;
+}
+
+/* เอฟเฟกต์ร่วง */
+@keyframes fall{
+
+    0%{
+        transform:translateY(-120px) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="dog">🐶</div>
+<div class="cat">🐱</div>
+
+<div class="container">
+
+<h1>Portfolio นายกฤษฎา</h1>
+
+<img src="images/WIN_20260716_14_03_02_Pro.jpg" class="profile" alt="รูปแนะนำตัว">
+
+<a href="profile.html">👤 ประวัติส่วนตัว</a>
+
+<a href="activity.html">🏆 กิจกรรม</a>
+
+<a href="education.html">🎓 ประวัติการศึกษา</a>
+
+<a href="contact.html">📞 ช่องทางการติดต่อ</a>
+
+</div>
+
+</body>
+</html>
