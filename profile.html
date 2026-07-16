@@ -6,61 +6,83 @@
 <title>ประวัติส่วนตัว</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Tahoma,sans-serif;
-    background:linear-gradient(to bottom,#d9d9d9,#8c8c8c);
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Tahoma',sans-serif;
+    background:linear-gradient(135deg,#d9d9d9,#9e9e9e);
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
+    overflow:hidden;
 }
 
+/* กล่องข้อมูล */
 .container{
+    width:450px;
     background:#ffffff;
-    width:420px;
-    padding:30px;
     border-radius:20px;
+    padding:30px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    animation:fadeIn 1s;
 }
 
+/* หัวข้อ */
 h1{
     color:#444;
     margin-bottom:20px;
+    font-size:32px;
 }
 
-img{
+/* รูป */
+.profile{
     width:180px;
     height:180px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid #666;
+    border:6px solid #666;
     box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:.4s;
     margin-bottom:20px;
-    transition:.3s;
 }
 
-img:hover{
-    transform:scale(1.05);
+.profile:hover{
+    transform:scale(1.08);
 }
 
+/* ข้อมูล */
 .info{
     text-align:left;
+    background:#f5f5f5;
+    border-radius:15px;
+    padding:20px;
     font-size:18px;
-    color:#333;
     line-height:2;
+    color:#333;
+    margin-top:10px;
 }
 
+.info b{
+    color:#555;
+}
+
+/* ปุ่ม */
 .back{
     display:inline-block;
-    margin-top:20px;
-    text-decoration:none;
+    margin-top:25px;
+    padding:12px 28px;
     background:#666;
-    color:white;
-    padding:12px 25px;
+    color:#fff;
+    text-decoration:none;
     border-radius:10px;
     transition:.3s;
+    font-size:17px;
 }
 
 .back:hover{
@@ -68,25 +90,43 @@ img:hover{
     transform:scale(1.05);
 }
 
+/* หมา */
 .dog{
     position:fixed;
     left:40px;
     bottom:20px;
-    font-size:60px;
-    animation:jump 2s infinite;
+    font-size:65px;
+    animation:bounce 2s infinite;
 }
 
+/* แมว */
 .cat{
     position:fixed;
     right:40px;
     bottom:20px;
-    font-size:60px;
-    animation:jump 2s infinite 1s;
+    font-size:65px;
+    animation:bounce 2s infinite 1s;
 }
 
-@keyframes jump{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-20px);}
+/* แอนิเมชัน */
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 </style>
 
@@ -100,14 +140,24 @@ img:hover{
 
 <h1>👤 ประวัติส่วนตัว</h1>
 
-<img src="WIN_20260716_14_03_02_Pro.jpg" alt="รูปแนะนำตัว">
+<img src="WIN_20260716_14_03_02_Pro.jpg" class="profile" alt="รูปแนะนำตัว">
 
 <div class="info">
-<b>ชื่อ-นามสกุล :</b> กฤษฎา บรรเทาทุกข์<br>
-<b>ชื่อเล่น :</b> โน่<br>
-<b>ชั้น :</b> มัธยมศึกษาปีที่ 6/5<br>
-<b>สถานศึกษา :</b> โรงเรียนพานทองต้นสน จังหวัดชลบุรี<br>
-<b>สายการเรียน :</b> ศิลป์-ทั่วไป<br>
+
+<b>👤 ชื่อ-นามสกุล :</b> กฤษฎา บรรเทาทุกข์<br>
+
+<b>😊 ชื่อเล่น :</b> โน่<br>
+
+<b>🎓 ชั้น :</b> มัธยมศึกษาปีที่ 6/5<br>
+
+<b>🏫 สถานศึกษา :</b> โรงเรียนพานทองต้นสน จังหวัดชลบุรี<br>
+
+<b>📚 แผนการเรียน :</b> ศิลป์-ทั่วไป<br>
+
+<b>💻 ความสนใจ :</b> การเขียนเว็บไซต์ (HTML/CSS), เทคโนโลยี และคอมพิวเตอร์<br>
+
+<b>🎯 เป้าหมาย :</b> ศึกษาต่อระดับมหาวิทยาลัย เพื่อพัฒนาทักษะด้านเทคโนโลยีและสร้างผลงานที่มีคุณภาพ
+
 </div>
 
 <a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
