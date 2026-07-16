@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กิจกรรม</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma,sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+
+    background:
+    radial-gradient(circle at top left,#ffffff55 0%,transparent 25%),
+    radial-gradient(circle at bottom right,#ffffff33 0%,transparent 30%),
+    linear-gradient(135deg,#d8d8d8,#9d9d9d,#707070);
+}
+
+/* ลายจุดพื้นหลัง */
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.18) 2px,transparent 2px);
+    background-size:40px 40px;
+}
+
+/* วงกลม */
+
+.bg1,.bg2,.bg3{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:.45;
+    animation:floatbg 10s ease-in-out infinite;
+}
+
+.bg1{
+    width:300px;
+    height:300px;
+    background:white;
+    top:-80px;
+    left:-80px;
+}
+
+.bg2{
+    width:250px;
+    height:250px;
+    background:#bdbdbd;
+    bottom:-70px;
+    right:-70px;
+    animation-delay:3s;
+}
+
+.bg3{
+    width:180px;
+    height:180px;
+    background:#ececec;
+    top:55%;
+    left:65%;
+    animation-delay:6s;
+}
+
+@keyframes floatbg{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-25px);}
+}
+
+/* กล่อง */
+
+.container{
+    width:700px;
+    max-height:85vh;
+    overflow-y:auto;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    position:relative;
+    z-index:2;
+}
+
+.container::-webkit-scrollbar{
+    width:8px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background:#777;
+    border-radius:10px;
+}
+
+h1{
+    text-align:center;
+    color:#444;
+    margin-bottom:25px;
+}
+
+.section{
+    margin-bottom:25px;
+}
+
+.section h2{
+    color:#555;
+    margin-bottom:10px;
+    border-left:5px solid #666;
+    padding-left:10px;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    background:#f7f7f7;
+    margin:8px 0;
+    padding:12px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+li:hover{
+    background:#ececec;
+    transform:translateX(8px);
+}
+
+/* ปุ่ม */
+
+.back{
+    display:block;
+    width:220px;
+    margin:25px auto 0;
+    text-align:center;
+    text-decoration:none;
+    background:#666;
+    color:white;
+    padding:13px;
+    border-radius:12px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.back:hover{
+    background:#333;
+    transform:scale(1.05);
+}
+
+/* หมา แมว */
+
+.dog,.cat{
+    position:absolute;
+    top:-120px;
+    font-size:60px;
+    animation:fall 6s linear infinite;
+}
+
+.dog{
+    left:15%;
+}
+
+.cat{
+    right:15%;
+    animation-delay:3s;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-120px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(720deg);
+opacity:0;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+<div class="bg3"></div>
+
+<div class="dog">🐶</div>
+<div class="cat">🐱</div>
+
+<div class="container">
+
+<h1>🏆 กิจกรรม</h1>
+
+<div class="section">
+<h2>📚 กิจกรรมด้านวิชาการ</h2>
+<ul>
+<li>เข้าร่วมการแข่งขันตอบปัญหาวิชาการ</li>
+<li>เข้าค่ายวิชาการ</li>
+<li>อบรม HTML / CSS และเทคโนโลยี</li>
+<li>นำเสนอผลงานโครงงาน</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>❤️ กิจกรรมจิตอาสา</h2>
+<ul>
+<li>เก็บขยะในชุมชน</li>
+<li>ปลูกต้นไม้</li>
+<li>ช่วยงานวันเด็ก</li>
+<li>ช่วยงานวัดและชุมชน</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🏫 กิจกรรมในโรงเรียน</h2>
+<ul>
+<li>ช่วยจัดงานกีฬาสี</li>
+<li>ช่วยจัดงานวันวิทยาศาสตร์</li>
+<li>ช่วยงานวันไหว้ครู</li>
+<li>เป็นพิธีกรในกิจกรรมโรงเรียน</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>💻 ชมรมและผลงาน</h2>
+<ul>
+<li>สมาชิกชมรมคอมพิวเตอร์</li>
+<li>สร้างเว็บไซต์ Portfolio</li>
+<li>ศึกษาและพัฒนา HTML / CSS</li>
+<li>ออกแบบเว็บไซต์ด้วย GitHub Pages</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🏅 การแข่งขันและการอบรม</h2>
+<ul>
+<li>แข่งขันสร้างเว็บไซต์</li>
+<li>อบรม AI</li>
+<li>อบรม Cyber Security</li>
+<li>อบรม Python เบื้องต้น</li>
+</ul>
+</div>
+
+<a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
+
+</div>
+
+</body>
+</html>
