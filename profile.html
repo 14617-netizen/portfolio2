@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติส่วนตัว</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:linear-gradient(to bottom,#d9d9d9,#8c8c8c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    background:#ffffff;
+    width:420px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#444;
+    margin-bottom:20px;
+}
+
+img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #666;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+img:hover{
+    transform:scale(1.05);
+}
+
+.info{
+    text-align:left;
+    font-size:18px;
+    color:#333;
+    line-height:2;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    background:#666;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.back:hover{
+    background:#444;
+    transform:scale(1.05);
+}
+
+.dog{
+    position:fixed;
+    left:40px;
+    bottom:20px;
+    font-size:60px;
+    animation:jump 2s infinite;
+}
+
+.cat{
+    position:fixed;
+    right:40px;
+    bottom:20px;
+    font-size:60px;
+    animation:jump 2s infinite 1s;
+}
+
+@keyframes jump{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="dog">🐶</div>
+
+<div class="container">
+
+<h1>👤 ประวัติส่วนตัว</h1>
+
+<img src="images/WIN_20260716_14_03_02_Pro.jpg" alt="รูปแนะนำตัว">
+
+<div class="info">
+<b>ชื่อ-นามสกุล :</b> กฤษฎา บรรเทาทุกข์<br>
+<b>ชื่อเล่น :</b> โน่<br>
+<b>ชั้น :</b> มัธยมศึกษาปีที่ 6/5<br>
+<b>สถานศึกษา :</b> โรงเรียนพานทองต้นสน จังหวัดชลบุรี<br>
+<b>สายการเรียน :</b> ศิลป์-ทั่วไป<br>
+</div>
+
+<a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
+
+</div>
+
+<div class="cat">🐱</div>
+
+</body>
+</html>
